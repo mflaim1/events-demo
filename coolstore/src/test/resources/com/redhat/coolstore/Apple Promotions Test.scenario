@@ -45,7 +45,12 @@
     </org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
     <fact-data>
       <type>ShoppingCart</type>
-      <fieldData/>
+      <fieldData>
+        <field-data>
+          <name>shoppingCartItemList</name>
+          <collectionFieldList/>
+        </field-data>
+      </fieldData>
       <name>shoppingCart</name>
       <isModify>false</isModify>
     </fact-data>
@@ -66,30 +71,41 @@
       <name>promoEvent</name>
       <isModify>false</isModify>
     </fact-data>
-    <execution-trace/>
+    <execution-trace>
+      <executionTimeResult>57</executionTimeResult>
+      <numberOfRulesFired>1</numberOfRulesFired>
+    </execution-trace>
     <expect-rule>
       <ruleName>Apply Cart Item Promotions</ruleName>
       <expectedCount>1</expectedCount>
+      <explanation>Rule [Apply Cart Item Promotions] activated 1 times.</explanation>
+      <successResult>true</successResult>
+      <actualResult>1</actualResult>
     </expect-rule>
     <expect-fact>
       <fieldValues>
         <expect-field>
           <fieldName>promoSavings</fieldName>
           <expected>75</expected>
+          <successResult>true</successResult>
+          <explanation>[shoppingCartItem] field [promoSavings] was [75].</explanation>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
         <expect-field>
           <fieldName>price</fieldName>
           <expected>75</expected>
+          <successResult>true</successResult>
+          <explanation>[shoppingCartItem] field [price] was [75].</explanation>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>shoppingCartItem</name>
       <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
+  <lastRunResult>2017-06-01 18:51:52.398 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.redhat.coolstore</packageName>
