@@ -19,10 +19,7 @@ public class PromoEvent implements java.io.Serializable
    @org.kie.api.definition.type.Position(1)
    private double percentOff;
 
-   @org.kie.api.definition.type.Label("PromoID")
-   private java.lang.String promoId;
-
-   @org.kie.api.definition.type.Label(value = "Timestamp")
+   @org.kie.api.definition.type.Label("Timestamp")
    private java.util.Date timestamp;
 
    public PromoEvent()
@@ -49,16 +46,6 @@ public class PromoEvent implements java.io.Serializable
       this.percentOff = percentOff;
    }
 
-   public java.lang.String getPromoId()
-   {
-      return this.promoId;
-   }
-
-   public void setPromoId(java.lang.String promoId)
-   {
-      this.promoId = promoId;
-   }
-
    public java.util.Date getTimestamp()
    {
       return this.timestamp;
@@ -70,11 +57,10 @@ public class PromoEvent implements java.io.Serializable
    }
 
    public PromoEvent(java.lang.String itemId, double percentOff,
-         java.lang.String promoId, java.util.Date timestamp)
+         java.util.Date timestamp)
    {
       this.itemId = itemId;
       this.percentOff = percentOff;
-      this.promoId = promoId;
       this.timestamp = timestamp;
    }
 
