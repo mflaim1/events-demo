@@ -12,7 +12,7 @@ rule "Apply Cart Item Promotions"
 		not (PromoEvent( itemId == $itemId , this after $promo1 )) 
 	then
 		modify( shoppingCartItem ) {
-				setPrice( $sci.price * (1-$pctOff) ), 
-				setPromoSavings( $sci.price * $pctOff )
+				setPrice( $shoppingCartItem.price * (1-$percentOff) ), 
+				setPromoSavings( $shoppingCartItem.price * $percentOff )
 		}
 end
