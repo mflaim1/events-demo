@@ -18,7 +18,7 @@ public class PromoEvent implements java.io.Serializable
    @org.kie.api.definition.type.Position(1)
    private double percentOff;
 
-   @org.kie.api.definition.type.Label(value = "Promo ID")
+   @org.kie.api.definition.type.Label("PromoID")
    private java.lang.String promoId;
 
    public PromoEvent()
