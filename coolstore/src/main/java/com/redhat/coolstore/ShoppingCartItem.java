@@ -33,9 +33,6 @@ public class ShoppingCartItem implements java.io.Serializable
    @org.kie.api.definition.type.Position(5)
    private com.redhat.coolstore.ShoppingCart shoppingCart;
 
-   @org.kie.api.definition.type.Label(value = "Promo ID")
-   private java.lang.String promoId;
-
    public ShoppingCartItem()
    {
    }
@@ -100,19 +97,9 @@ public class ShoppingCartItem implements java.io.Serializable
       this.quantity = quantity;
    }
 
-   public java.lang.String getPromoId()
-   {
-      return this.promoId;
-   }
-
-   public void setPromoId(java.lang.String promoId)
-   {
-      this.promoId = promoId;
-   }
-
    public ShoppingCartItem(java.lang.String itemId, java.lang.String name,
          double price, double promoSavings, int quantity,
-         com.redhat.coolstore.ShoppingCart shoppingCart, java.lang.String promoId)
+         com.redhat.coolstore.ShoppingCart shoppingCart)
    {
       this.itemId = itemId;
       this.name = name;
@@ -120,7 +107,6 @@ public class ShoppingCartItem implements java.io.Serializable
       this.promoSavings = promoSavings;
       this.quantity = quantity;
       this.shoppingCart = shoppingCart;
-      this.promoId = promoId;
    }
 
    public ShoppingCartItem(java.lang.String itemId, java.lang.String name,
