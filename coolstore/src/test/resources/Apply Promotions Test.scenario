@@ -71,8 +71,42 @@
       <name>promoEvent</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>PromoEvent</type>
+      <fieldData>
+        <field-data>
+          <name>itemId</name>
+          <value>1</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>percentOff</name>
+          <value>0.50</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>promoEvent2</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>PromoEvent</type>
+      <fieldData>
+        <field-data>
+          <name>itemId</name>
+          <value>1</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>percentOff</name>
+          <value>0.10</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>promoEvent3</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace>
-      <executionTimeResult>12</executionTimeResult>
+      <executionTimeResult>14</executionTimeResult>
       <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-rule>
@@ -86,19 +120,19 @@
       <fieldValues>
         <expect-field>
           <fieldName>promoSavings</fieldName>
-          <expected>37.5</expected>
-          <actualResult>37.5</actualResult>
+          <expected>15.0</expected>
+          <actualResult>75.0</actualResult>
           <successResult>true</successResult>
-          <explanation>[shoppingCartItem] field [promoSavings] was [37.5].</explanation>
+          <explanation>[shoppingCartItem] field [promoSavings] was [15.0].</explanation>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
         <expect-field>
           <fieldName>price</fieldName>
-          <expected>112.5</expected>
-          <actualResult>37.5</actualResult>
+          <expected>135.0</expected>
+          <actualResult>75.0</actualResult>
           <successResult>true</successResult>
-          <explanation>[shoppingCartItem] field [price] was [112.5].</explanation>
+          <explanation>[shoppingCartItem] field [price] was [135.0].</explanation>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
@@ -107,7 +141,7 @@
       <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
-  <lastRunResult>2017-06-05 15:39:09.371 UTC</lastRunResult>
+  <lastRunResult>2017-06-05 15:49:28.481 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.redhat.coolstore</packageName>
