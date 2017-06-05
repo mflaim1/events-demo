@@ -121,7 +121,7 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace>
-      <executionTimeResult>12</executionTimeResult>
+      <executionTimeResult>16</executionTimeResult>
       <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-rule>
@@ -156,7 +156,7 @@
       <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
-  <lastRunResult>2017-06-05 19:54:52.742 UTC</lastRunResult>
+  <lastRunResult>2017-06-05 20:11:14.162 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.redhat.coolstore</packageName>
