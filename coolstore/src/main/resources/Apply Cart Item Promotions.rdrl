@@ -5,9 +5,8 @@ import com.redhat.coolstore.PromoEvent;
 rule "Apply Cart Item Promotions"
 	ruleflow-group "promo-cart-rules"
 	dialect "mvel"
-	no-loop true
 	when
-		$shoppingCartItem : ShoppingCartItem( $itemId : itemId, promoId == null || promoId == "0.0" )
+		$shoppingCartItem : ShoppingCartItem( $itemId : itemId, promoSavings == 0.0 || promoSavings == null )
 		$promo1 : PromoEvent( itemId == $itemId , $percentOff : percentOff)
 		not (PromoEvent( itemId == $itemId , this after $promo1 )) 
 	then
