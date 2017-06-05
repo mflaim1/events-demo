@@ -7,11 +7,11 @@ rule "Apply Cart Item Promotions"
 	ruleflow-group "promo-cart-rules"
 	dialect "mvel"
 	when
-		shoppingCartItem : ShoppingCartItem( $itemId : itemId)
+		$shoppingCartItem : ShoppingCartItem( $itemId : itemId)
 		$promo1 : PromoEvent( itemId == $itemId , $percentOff : percentOff)
 		not (PromoEvent( itemId == $itemId , this after $promo1 )) 
 	then
-		modify( shoppingCartItem ) {
+		modify( $shoppingCartItem ) {
 				setPrice( $shoppingCartItem.price * (1-$percentOff) ), 
 				setPromoSavings( $shoppingCartItem.price * $percentOff )
 		}
