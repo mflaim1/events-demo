@@ -112,7 +112,17 @@
   <inclusive>false</inclusive>
   <packageName>com.redhat.coolstore</packageName>
   <imports>
-    <imports/>
+    <imports>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.redhat.coolstore.PromoEvent</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.redhat.coolstore.ShoppingCartItem</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.redhat.coolstore.ShoppingCart</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+    </imports>
   </imports>
   <ksessions>
     <string>coolstore-stateful-kie-session</string>
