@@ -5,6 +5,7 @@ package com.redhat.coolstore;
  */
 @org.kie.api.definition.type.Label("PromoEvent")
 @org.kie.api.definition.type.Role(org.kie.api.definition.type.Role.Type.EVENT)
+@org.kie.api.definition.type.Timestamp("timestamp")
 public class PromoEvent implements java.io.Serializable
 {
 
@@ -20,6 +21,9 @@ public class PromoEvent implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("PromoID")
    private java.lang.String promoId;
+
+   @org.kie.api.definition.type.Label(value = "Timestamp")
+   private java.util.Date timestamp;
 
    public PromoEvent()
    {
@@ -55,12 +59,23 @@ public class PromoEvent implements java.io.Serializable
       this.promoId = promoId;
    }
 
+   public java.util.Date getTimestamp()
+   {
+      return this.timestamp;
+   }
+
+   public void setTimestamp(java.util.Date timestamp)
+   {
+      this.timestamp = timestamp;
+   }
+
    public PromoEvent(java.lang.String itemId, double percentOff,
-         java.lang.String promoId)
+         java.lang.String promoId, java.util.Date timestamp)
    {
       this.itemId = itemId;
       this.percentOff = percentOff;
       this.promoId = promoId;
+      this.timestamp = timestamp;
    }
 
    public PromoEvent(java.lang.String itemId, double percentOff)
