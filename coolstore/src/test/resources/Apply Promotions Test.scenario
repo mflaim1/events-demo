@@ -76,6 +76,58 @@
       <name>promoEvent</name>
       <isModify>false</isModify>
     </fact-data>
+    <execution-trace>
+      <executionTimeResult>16</executionTimeResult>
+      <numberOfRulesFired>1</numberOfRulesFired>
+    </execution-trace>
+    <expect-rule>
+      <ruleName>Apply Cart Item Promotions</ruleName>
+      <expectedCount>1</expectedCount>
+      <explanation>Rule [Apply Cart Item Promotions] activated 1 times.</explanation>
+      <successResult>true</successResult>
+      <actualResult>1</actualResult>
+    </expect-rule>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>promoSavings</fieldName>
+          <expected>37.50</expected>
+          <actualResult>75.0</actualResult>
+          <successResult>true</successResult>
+          <explanation>[shoppingCartItem] field [promoSavings] was [37.50].</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+        <expect-field>
+          <fieldName>price</fieldName>
+          <expected>112.50</expected>
+          <actualResult>75.0</actualResult>
+          <successResult>true</successResult>
+          <explanation>[shoppingCartItem] field [price] was [112.50].</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>shoppingCartItem</name>
+      <anonymous>false</anonymous>
+    </expect-fact>
+    <fact-data>
+      <type>ShoppingCartItem</type>
+      <fieldData>
+        <field-data>
+          <name>promoSavings</name>
+          <value>0.0</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>price</name>
+          <value>150.00</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>shoppingCartItem</name>
+      <isModify>true</isModify>
+    </fact-data>
     <fact-data>
       <type>PromoEvent</type>
       <fieldData>
@@ -121,7 +173,7 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace>
-      <executionTimeResult>16</executionTimeResult>
+      <executionTimeResult>1</executionTimeResult>
       <numberOfRulesFired>1</numberOfRulesFired>
     </execution-trace>
     <expect-rule>
@@ -134,20 +186,18 @@
     <expect-fact>
       <fieldValues>
         <expect-field>
-          <fieldName>promoSavings</fieldName>
-          <expected>15.0</expected>
-          <actualResult>75.0</actualResult>
+          <fieldName>price</fieldName>
+          <expected>135.0</expected>
           <successResult>true</successResult>
-          <explanation>[shoppingCartItem] field [promoSavings] was [15.0].</explanation>
+          <explanation>[shoppingCartItem] field [price] was [135.0].</explanation>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
         <expect-field>
-          <fieldName>price</fieldName>
-          <expected>135.0</expected>
-          <actualResult>75.0</actualResult>
+          <fieldName>promoSavings</fieldName>
+          <expected>15.0</expected>
           <successResult>true</successResult>
-          <explanation>[shoppingCartItem] field [price] was [135.0].</explanation>
+          <explanation>[shoppingCartItem] field [promoSavings] was [15.0].</explanation>
           <operator>==</operator>
           <nature>1</nature>
         </expect-field>
@@ -156,7 +206,7 @@
       <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
-  <lastRunResult>2017-06-05 20:11:14.162 UTC</lastRunResult>
+  <lastRunResult>2017-06-06 13:35:12.842 UTC</lastRunResult>
   <rules/>
   <inclusive>false</inclusive>
   <packageName>com.redhat.coolstore</packageName>
